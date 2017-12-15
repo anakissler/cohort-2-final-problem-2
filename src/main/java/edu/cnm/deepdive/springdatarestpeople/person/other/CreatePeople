@@ -1,0 +1,18 @@
+POST /people HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: a12b8098-240e-fdd9-f03b-cabb1a1ef1d8
+
+{"name" : "Bobby"}
+
+
+
+
+POST /people HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+Cache-Control: no-cache
+Postman-Token: ba461424-5090-0162-016e-c0d505c72ec6
+
+{"name" : "Samuel"}

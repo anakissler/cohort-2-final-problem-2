@@ -1,0 +1,68 @@
+{
+    "_embedded": {
+        "people": [
+            {
+                "created": "2017-12-15T16:37:24.555+0000",
+                "name": "Bobby",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/people/1"
+                    },
+                    "person": {
+                        "href": "http://localhost:8080/people/1"
+                    },
+                    "groups": {
+                        "href": "http://localhost:8080/people/1/groups"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8080/people/1/memberships"
+                    }
+                }
+            },
+            {
+                "created": "2017-12-15T16:39:33.564+0000",
+                "name": "Carrie",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/people/2"
+                    },
+                    "person": {
+                        "href": "http://localhost:8080/people/2"
+                    },
+                    "groups": {
+                        "href": "http://localhost:8080/people/2/groups"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8080/people/2/memberships"
+                    }
+                }
+            },
+            {
+                "created": "2017-12-15T16:39:59.723+0000",
+                "name": "Samuel",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/people/3"
+                    },
+                    "person": {
+                        "href": "http://localhost:8080/people/3"
+                    },
+                    "groups": {
+                        "href": "http://localhost:8080/people/3/groups"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8080/people/3/memberships"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/people"
+        },
+        "profile": {
+            "href": "http://localhost:8080/profile/people"
+        }
+    }
+}
