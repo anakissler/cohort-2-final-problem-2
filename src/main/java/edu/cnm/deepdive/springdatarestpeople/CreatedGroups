@@ -1,0 +1,74 @@
+//Lists of groups with different founders
+//Request URL : http://localhost:8080/groups
+
+{
+              "created": "2017-12-15T02:54:35.162+0000",
+              "name": "Group 1",
+              "_links": {
+                  "self": {
+                      "href": "http://localhost:8080/groups/7"
+                  },
+                  "group": {
+                      "href": "http://localhost:8080/groups/7"
+                  },
+                  "person": {
+                      "href": "http://localhost:8080/groups/7/person"
+                  },
+                  "memberships": {
+                      "href": "http://localhost:8080/groups/7/memberships"
+                  }
+              }
+          },
+          {
+              "created": "2017-12-15T02:55:13.529+0000",
+              "name": "Group 2",
+              "_links": {
+                  "self": {
+                      "href": "http://localhost:8080/groups/8"
+                  },
+                  "group": {
+                      "href": "http://localhost:8080/groups/8"
+                  },
+                  "person": {
+                      "href": "http://localhost:8080/groups/8/person"
+                  },
+                  "memberships": {
+                      "href": "http://localhost:8080/groups/8/memberships"
+                  }
+              }
+          },
+          {
+              "created": "2017-12-15T02:56:05.741+0000",
+              "name": "Group 1",
+              "_links": {
+                  "self": {
+                      "href": "http://localhost:8080/groups/9"
+                  },
+                  "group": {
+                      "href": "http://localhost:8080/groups/9"
+                  },
+                  "person": {
+                      "href": "http://localhost:8080/groups/9/person"
+                  },
+                  "memberships": {
+                      "href": "http://localhost:8080/groups/9/memberships"
+                  }
+              }
+          }
+      ]
+  },
+  "_links": {
+      "self": {
+          "href": "http://localhost:8080/groups{?page,size,sort}",
+          "templated": true
+      },
+      "profile": {
+          "href": "http://localhost:8080/profile/groups"
+      }
+  },
+  "page": {
+      "size": 20,
+      "totalElements": 4,
+      "totalPages": 1,
+      "number": 0
+  }

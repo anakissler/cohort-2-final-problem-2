@@ -1,7 +1,7 @@
-package edu.cnm.deepdive.springdatarestpeople.person;
+package edu.cnm.deepdive.springdatarestpeople.group;
 
-import edu.cnm.deepdive.springdatarestpeople.group.Group;
 import edu.cnm.deepdive.springdatarestpeople.membership.Membership;
+import edu.cnm.deepdive.springdatarestpeople.person.Person;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -12,20 +12,20 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import org.hibernate.annotations.CreationTimestamp;
 
 /**
- * Represents a specific person
+ * Represents the Group specific people belong to
  */
-@Entity
-public class Person {
-
+@Entity(name = "Flowwer")
+public class Group {
 
   /**
-   * Saves a specific Id for a given person
+   * Saves a specific Id for a given group
    */
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -39,19 +39,20 @@ public class Person {
   @Temporal(TemporalType.TIMESTAMP)
   private Date created;
 
-  /**
-   * Map one person to many membership.
-   */
-  @OneToMany(fetch = FetchType.EAGER, mappedBy = "person", cascade = CascadeType.ALL)
-  private List<Membership> memberships = new LinkedList<>();
 
   /**
-   * Map one person to many group.
+   * Map one group to many memberships.
    */
-  @OneToMany(fetch = FetchType.EAGER, mappedBy = "person", cascade = CascadeType.ALL)
-  private List<Group> groups = new LinkedList<>();
+  @OneToMany(fetch = FetchType.EAGER, mappedBy = "group", cascade = CascadeType.ALL)
+  private List<Membership> memberships = new LinkedList<>();
   /**
-   * Saves the name for a specific person
+   * Saves a specific person to the group
+   */
+  @ManyToOne(fetch = FetchType.EAGER)
+  @JoinColumn(name = "person_id")
+  private Person person;
+  /**
+   * Saves the given name for the group
    */
   private String name;
 
@@ -64,16 +65,16 @@ public class Person {
   }
 
   /**
-   * Saves the specific person to the database
+   * Saves the group to the database
    */
-  public Person() {
+  public Group() {
   }
 
   /**
    * Allows for the mutation of the name
    * @param name passes in the name
    */
-  public Person(String name) {
+  public Group(String name) {
     this.name = name;
   }
 
@@ -108,19 +109,21 @@ public class Person {
   public void setMemberships(List<Membership> memberships) {
     this.memberships = memberships;
   }
+
   /**
-   * Allows for the retrieval of a specific group
-   * @return returns the specific group
+   * Allows for the retrieval of a specific person
+   * @return returns the person
    */
-  public List<Group> getGroups() {
-    return groups;
+  public Person getPerson() {
+    return person;
   }
 
   /**
-   * Allows for the mutation of a specific group
-   * @param groups passes in a group
+   * Allows for the mutation of a specific person
+   * @param person passes in the person
    */
-  public void setGroups(List<Group> groups) {
-    this.groups = groups;
+  public void setPerson(Person person) {
+    this.person = person;
   }
 }
+
