@@ -1,0 +1,57 @@
+{
+    "_embedded": {
+        "groups": [
+            {
+                "created": "2017-12-15T18:33:29.620+0000",
+                "name": "Up",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/groups/1"
+                    },
+                    "group": {
+                        "href": "http://localhost:8080/groups/1"
+                    },
+                    "person": {
+                        "href": "http://localhost:8080/groups/1/person"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8080/groups/1/memberships"
+                    }
+                }
+            },
+            {
+                "created": "2017-12-15T18:34:25.454+0000",
+                "name": "Down",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/groups/2"
+                    },
+                    "group": {
+                        "href": "http://localhost:8080/groups/2"
+                    },
+                    "person": {
+                        "href": "http://localhost:8080/groups/2/person"
+                    },
+                    "memberships": {
+                        "href": "http://localhost:8080/groups/2/memberships"
+                    }
+                }
+            }
+        ]
+    },
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/groups{?page,size,sort}",
+            "templated": true
+        },
+        "profile": {
+            "href": "http://localhost:8080/profile/groups"
+        }
+    },
+    "page": {
+        "size": 20,
+        "totalElements": 2,
+        "totalPages": 1,
+        "number": 0
+    }
+}
